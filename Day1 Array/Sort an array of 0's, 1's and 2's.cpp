@@ -14,16 +14,16 @@ public:
             2. fill array with zero -> one -> two
 
                 void sortColors(vector<int>& nums) {
-                    int nextZeros = 0, nextOnes = 0, nextTwos = 0;
+                    int countZero = 0, countOne = 0, countTwo = 0;
                     for(auto it : nums){
-                        if(it == 0) nextZeros++;
-                        else if(it == 1) nextOnes++;
-                        else nextTwos++;
+                        if(it == 0) countZero++;
+                        else if(it == 1) countOne++;
+                        else countTwo++;
                     }
                     int k = 0;
-                    for(int i=0; i<nextZeros; i++) nums[k++] = 0;
-                    for(int i=0; i<nextOnes; i++) nums[k++] = 1;
-                    for(int i=0; i<nextTwos; i++) nums[k++] = 2;
+                    for(int i=0; i<countZero; i++) nums[k++] = 0;
+                    for(int i=0; i<countOne; i++) nums[k++] = 1;
+                    for(int i=0; i<countTwo; i++) nums[k++] = 2;
                 }
             TC : O(N) + O(N)
             SC : O(1)
